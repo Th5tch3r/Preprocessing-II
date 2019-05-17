@@ -2,27 +2,46 @@
 header {
     display: flex;
     max-width: 800px;
-    display: flex;
-   
+
+    @media @mobile {
+        display: flex;
+        flex-direction: column;
+    }
 
     h1 {
       margin: 30px 0;
+      
+      @media @mobile {
+          display: flex;
+          justify-content: center;
+      }
     }
+
 
     nav {
         margin: 40px 0 0 300px;
+
+        @media @mobile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0;
+            margin-top: -40px;
+        }
         
         a {
             text-decoration: none;
             color: @shark;
             font-size: 1.5rem;
             margin: 20px;
+
+            @media @mobile {
+                margin: 20px 30px;
+            }
             
             &:hover {
                 color: @eastern-blue;
             }
         }
-
     }
-
 }

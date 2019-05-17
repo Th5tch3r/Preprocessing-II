@@ -1,15 +1,33 @@
 .home {
-  border: 1px solid red;
+  max-width: 90%;
+  
+  }
   .intro-section {
     border-top: 2px dashed @navigation-border;
     border-bottom: 2px dashed @navigation-border;
-    
+
+    img {
+      @media @mobile {
+        width: 94%;
+        margin-right: 3%;
+        margin-left: 3%;
+      }
+    }
     h2 {
       margin-top: 20px;
+
+      @media @mobile {
+        margin-left: 3%;
+      }
     }
     
     p {
       margin-bottom: 20px;
+
+      @media @mobile {
+        margin-left: 3%;
+        margin-right: 3%;
+      }
     }
   }
 
@@ -18,17 +36,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
   
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 94%;
+        margin-right: 3%;
+        margin-left: 3%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 110%;
+        margin-left: 10%;
+        margin-right: 3%;
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
@@ -40,9 +74,19 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        width: 94%;
+        margin-right: 3%;
+        margin-left: 3%;
+      }
     }
 
     .img-content {
@@ -55,6 +99,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 90%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -66,12 +114,28 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+
       button {
         .btn-layout(@eastern-blue);
+
+        @media @mobile {
+          width: 95%;
+        }
       }
 
       button:hover {
@@ -81,6 +145,4 @@
       }
     }
   }
-
-
-}// home
+// home
